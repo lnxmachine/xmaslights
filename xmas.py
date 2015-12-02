@@ -12,8 +12,8 @@ def main():
 	GPIO.setmode(GPIO.BCM)
 	pin_list = [2, 3, 4, 17, 27, 22, 10, 9]
 	for i in pinList: 
-    	GPIO.setup(i, GPIO.OUT) 
-    	GPIO.output(i, GPIO.LOW)
+		GPIO.setup(i, GPIO.OUT) 
+		GPIO.output(i, GPIO.LOW)
 	
 	keys = []
 	# read JSON file
@@ -70,6 +70,6 @@ def main():
 					GPIO.output(pin_list[7], GPIO.HIGH)
 
 			# sleep for the specified time
-			sleep(state[0])
+			time.sleep(state[0])
 
 main()
