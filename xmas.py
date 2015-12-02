@@ -73,4 +73,7 @@ def main():
 			# sleep for the specified time
 			time.sleep(state[0])
 
+	# Reset GPIO settings
+	GPIO.cleanup()
+
 main()
