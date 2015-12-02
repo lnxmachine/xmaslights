@@ -1,0 +1,8 @@
+2 = Green
+3 = White
+4 = Red
+17 = Purple
+27 = Animals
+22 = Bush Right
+10 = Bush Left
+9
