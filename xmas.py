@@ -15,65 +15,66 @@ def main():
 		GPIO.setup(i, GPIO.OUT) 
 		GPIO.output(i, GPIO.LOW)
 	
-	keys = []
-	# read JSON file
-	with open('patterns.json') as data_file:    
-		data = json.load(data_file)
-		# get keys in JSON file
-		for key in data:
-			keys.append(key)
+	while True:
+		keys = []
+		# read JSON file
+		with open('patterns.json') as data_file:    
+			data = json.load(data_file)
+			# get keys in JSON file
+			for key in data:
+				keys.append(key)
 
-	# iterate over each set of patterns
-	for key in keys:
-		print("Executing pattern: {}").format(key)
-		# iterate over each pattern state
-		for state in data[key]:
-			# modify pins
-			for pin in pin_list:
-				if state[1] == 0:
-					GPIO.output(pin_list[0], GPIO.LOW)
-				else:
-					GPIO.output(pin_list[0], GPIO.HIGH)
+		# iterate over each set of patterns
+		for key in keys:
+			print("Executing pattern: {}").format(key)
+			# iterate over each pattern state
+			for state in data[key]:
+				# modify pins
+				for pin in pin_list:
+					if state[1] == 0:
+						GPIO.output(pin_list[0], GPIO.LOW)
+					else:
+						GPIO.output(pin_list[0], GPIO.HIGH)
 
-				if state[2] == 0:
-					GPIO.output(pin_list[1], GPIO.LOW)
-				else:
-					GPIO.output(pin_list[1], GPIO.HIGH)
+					if state[2] == 0:
+						GPIO.output(pin_list[1], GPIO.LOW)
+					else:
+						GPIO.output(pin_list[1], GPIO.HIGH)
 
-				if state[3] == 0:
-					GPIO.output(pin_list[2], GPIO.LOW)
-				else:
-					GPIO.output(pin_list[2], GPIO.HIGH)
+					if state[3] == 0:
+						GPIO.output(pin_list[2], GPIO.LOW)
+					else:
+						GPIO.output(pin_list[2], GPIO.HIGH)
 
-				if state[4] == 0:
-					GPIO.output(pin_list[3], GPIO.LOW)
-				else:
-					GPIO.output(pin_list[3], GPIO.HIGH)
+					if state[4] == 0:
+						GPIO.output(pin_list[3], GPIO.LOW)
+					else:
+						GPIO.output(pin_list[3], GPIO.HIGH)
 
-				if state[5] == 0:
-					GPIO.output(pin_list[4], GPIO.LOW)
-				else:
-					GPIO.output(pin_list[4], GPIO.HIGH)
+					if state[5] == 0:
+						GPIO.output(pin_list[4], GPIO.LOW)
+					else:
+						GPIO.output(pin_list[4], GPIO.HIGH)
 
-				if state[6] == 0:
-					GPIO.output(pin_list[5], GPIO.LOW)
-				else:
-					GPIO.output(pin_list[5], GPIO.HIGH)
+					if state[6] == 0:
+						GPIO.output(pin_list[5], GPIO.LOW)
+					else:
+						GPIO.output(pin_list[5], GPIO.HIGH)
 
-				if state[7] == 0:
-					GPIO.output(pin_list[6], GPIO.LOW)
-				else:
-					GPIO.output(pin_list[6], GPIO.HIGH)
+					if state[7] == 0:
+						GPIO.output(pin_list[6], GPIO.LOW)
+					else:
+						GPIO.output(pin_list[6], GPIO.HIGH)
 
-				if state[8] == 0:
-					GPIO.output(pin_list[7], GPIO.LOW)
-				else:
-					GPIO.output(pin_list[7], GPIO.HIGH)
+					if state[8] == 0:
+						GPIO.output(pin_list[7], GPIO.LOW)
+					else:
+						GPIO.output(pin_list[7], GPIO.HIGH)
 
-			# sleep for the specified time
-			time.sleep(state[0])
+				# sleep for the specified time
+				time.sleep(state[0])
 
-	# Reset GPIO settings
-	GPIO.cleanup()
+		# Reset GPIO settings
+		GPIO.cleanup()
 
 main()
