@@ -29,42 +29,42 @@ def main():
 		for state in data[key]:
 			# modify pins
 			for pin in pin_ist:
-				if state[1] = 0:
+				if state[1] == 0:
 					GPIO.output(pin_list[0], GPIO.LOW)
 				else:
 					GPIO.output(pin_list[0], GPIO.HIGH)
 
-				if state[2] = 0:
+				if state[2] == 0:
 					GPIO.output(pin_list[1], GPIO.LOW)
 				else:
 					GPIO.output(pin_list[1], GPIO.HIGH)
 
-				if state[3] = 0:
+				if state[3] == 0:
 					GPIO.output(pin_list[2], GPIO.LOW)
 				else:
 					GPIO.output(pin_list[2], GPIO.HIGH)
 
-				if state[4] = 0:
+				if state[4] == 0:
 					GPIO.output(pin_list[3], GPIO.LOW)
 				else:
 					GPIO.output(pin_list[3], GPIO.HIGH)
 
-				if state[5] = 0:
+				if state[5] == 0:
 					GPIO.output(pin_list[4], GPIO.LOW)
 				else:
 					GPIO.output(pin_list[4], GPIO.HIGH)
 
-				if state[6] = 0:
+				if state[6] == 0:
 					GPIO.output(pin_list[5], GPIO.LOW)
 				else:
 					GPIO.output(pin_list[5], GPIO.HIGH)
 
-				if state[7] = 0:
+				if state[7] == 0:
 					GPIO.output(pin_list[6], GPIO.LOW)
 				else:
 					GPIO.output(pin_list[6], GPIO.HIGH)
 
-				if state[8] = 0:
+				if state[8] == 0:
 					GPIO.output(pin_list[7], GPIO.LOW)
 				else:
 					GPIO.output(pin_list[7], GPIO.HIGH)
