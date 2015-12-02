@@ -25,10 +25,11 @@ def main():
 
 	# iterate over each set of patterns
 	for key in keys:
+		print("Executing pattern: {}").format(key)
 		# iterate over each pattern state
 		for state in data[key]:
 			# modify pins
-			for pin in pin_ist:
+			for pin in pin_list:
 				if state[1] == 0:
 					GPIO.output(pin_list[0], GPIO.LOW)
 				else:
